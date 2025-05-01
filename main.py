@@ -4,7 +4,10 @@ from ray import Ray
 from objects import Sphere
 from PIL import Image
 
-width, height = 200, 100  # Dimensions of rendered image
+# Dimensions of rendered image
+aspect_ratio = 2.39  # ultra-wide 
+width = 480
+height = int(width / aspect_ratio)
 
 image = Image.new("RGB", (width, height))
 pixels = image.load()
